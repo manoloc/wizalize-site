@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://assets.tcgdex.net https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com https://raw.githubusercontent.com https://cdn.shopify.com https://bills-archive.nyc3.cdn.digitaloceanspaces.com; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta property="og:title" content="A deck to try · Wizalize">
+  <meta property="og:description" content="View the cards, then import the deck into Wizalize. No account needed to preview.">
+  <meta property="og:type" content="website">
+  <title>Mazo compartido · Wizalize</title>
+  <link rel="stylesheet" href="./deck.css">
+  <script src="./deck.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="crystal" aria-hidden="true">◆</span> Wizalize</a>
+    <nav aria-label="Language"><button id="es" type="button" aria-pressed="true">ES</button><button id="en" type="button" aria-pressed="false">EN</button></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow" data-copy="eyebrow">UN MAZO COMPARTIDO CONTIGO</p>
+      <h1 id="title" data-copy="title">Tu próxima partida<br>empieza con un mazo.</h1>
+      <p class="intro" data-copy="intro">Revisa sus 20 cartas y llévalo a Wizalize. Sin cuenta para verlo.</p>
+      <p id="status" role="status" aria-live="polite">Cargando mazo…</p>
+      <div id="actions" hidden>
+        <a id="openApp" class="button primary" data-copy="open">Abrir mazo en Wizalize <span aria-hidden="true">→</span></a>
+        <p class="micro" data-copy="noCharge">Importar no ejecuta un análisis ni gasta cristales.</p>
+        <p id="openHelp" class="notice" data-copy="openHelp" hidden>¿No se abrió? Instala la app y vuelve a este enlace, o copia el código para pegarlo en Importar.</p>
+      </div>
+    </section>
+    <section id="composition" aria-labelledby="cardsTitle" hidden>
+      <div class="section-head"><h2 id="cardsTitle" data-copy="cardsTitle">Las cartas</h2><span id="counts"></span></div>
+      <ul id="deckCards" class="deck-grid"></ul>
+      <details class="code-panel"><summary data-copy="codeTitle">Código para importar manualmente</summary>
+        <p data-copy="codeHelp">En Wizalize, abre Importar y pega este código. Es un código de Wizalize, no del juego oficial.</p>
+        <label for="code" class="visually-hidden" data-copy="codeTitle">Código para importar manualmente</label>
+        <textarea id="code" readonly rows="4" spellcheck="false"></textarea>
+        <button id="copy" class="button secondary" type="button" data-copy="copy">Copiar código</button>
+        <span id="copyStatus" role="status" aria-live="polite"></span>
+      </details>
+    </section>
+    <section class="install" aria-labelledby="installTitle">
+      <div><h2 id="installTitle" data-copy="installTitle">¿Todavía no tienes Wizalize?</h2><p data-copy="installText">Instálala y vuelve a este enlace para importar el mazo.</p></div>
+      <div class="stores">
+        <a class="button secondary" href="https://apps.apple.com/cl/app/wizalize/id6760955601" rel="noreferrer">App Store</a>
+        <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.pocketdex.app" rel="noreferrer">Google Play</a>
+      </div>
+    </section>
+    <noscript><p class="notice">Activa JavaScript para ver las cartas del enlace. / Enable JavaScript to view the shared deck.</p></noscript>
+  </main>
+  <footer><p data-copy="privacy">El enlace contiene solo cartas y cantidades. Cualquiera que lo reciba puede verlas. Las imágenes se cargan desde fuentes públicas.</p>
+    <p data-copy="disclaimer">Wizalize es una herramienta independiente. No está afiliada con Nintendo, The Pokémon Company, Creatures, Game Freak ni DeNA.</p>
+    <a href="./privacy.html" data-copy="privacyLink">Privacidad</a> · <a href="./terms.html" data-copy="termsLink">Términos</a>
+  </footer>
+</body>
+</html>
